@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+            <h1 class="me-3 text-danger">¡Hola x,</h1>
+        </header>
+        <h3>Informacion Personal:</h3>
+        <ul id="variables-list"></ul>
+        <h3>Informacion del dispositivo en que consultas:</h3>
+        <ul id="attributes-list"></ul>
+        <h4 class="text-danger">¿Viste lo fácil que es obtener tu información? Ha esto se le conoce como Phishing o
+            robo de tu identidad.</h4>
+
+        <h5>Acabas de sufrir un ataque de phishing o robo de identidad como parte de una campaña realizada por tu equipo
+            de TIC. ¡No te preocupes! Te han redirigido a esta página educativa.Tomemos unos minutos para aprender...
+        </h5>
+        <p>
+            Este es un ataque simulado por su empresa para que esté al tanto de las amenazas.
+            Los enlaces a sitios web pueden haber sido
+            comprometidos por un atacante malicioso y haber sido utilizados como una forma de
+            recopilar información sobre usted y su entorno informático. Es posible que también se haya
+            utilizado para engañarlo para que descargue contenido malicioso o para que conceda acceso
+            a sus datos a aplicaciones maliciosas. A esto se le llama ataque drive-by.
+            La anterior información podría haber sido recopilada por un atacante
+            simplemente por su visita al sitio web.
+        </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+
+        var i = "";
+        screen.width && ((width = screen.width ? screen.width : ""), (height = screen.height ? screen.height : ""), (i += width + " x " + height));
+        var n,
+            t,
+            a,
+            o = navigator.appVersion,
+            r = navigator.userAgent,
+            d = navigator.appName,
+            s = "" + parseFloat(navigator.appVersion),
+            c = parseInt(navigator.appVersion, 10);
+        -1 != (t = r.indexOf("Opera")) && ((d = "Opera"), (s = r.substring(t + 6)), -1 != (t = r.indexOf("Version")) && (s = r.substring(t + 8))),
+            -1 != (t = r.indexOf("OPR"))
+                ? ((d = "Opera"), (s = r.substring(t + 4)))
+                : -1 != (t = r.indexOf("Edge"))
+                    ? ((d = "Microsoft Legacy Edge"), (s = r.substring(t + 5)))
+                    : -1 != (t = r.indexOf("Edg"))
+                        ? ((d = "Microsoft Edge"), (s = r.substring(t + 4)))
+                        : -1 != (t = r.indexOf("MSIE"))
+                            ? ((d = "Microsoft Internet Explorer"), (s = r.substring(t + 5)))
+                            : -1 != (t = r.indexOf("Chrome"))
+                                ? ((d = "Chrome"), (s = r.substring(t + 7)))
+                                : -1 != (t = r.indexOf("Safari"))
+                                    ? ((d = "Safari"), (s = r.substring(t + 7)), -1 != (t = r.indexOf("Version")) && (s = r.substring(t + 8)))
+                                    : -1 != (t = r.indexOf("Firefox"))
+                                        ? ((d = "Firefox"), (s = r.substring(t + 8)))
+                                        : -1 != r.indexOf("Trident/")
+                                            ? ((d = "Microsoft Internet Explorer"), (s = r.substring(r.indexOf("rv:") + 3)))
+                                            : (n = r.lastIndexOf(" ") + 1) < (t = r.lastIndexOf("/")) && ((d = r.substring(n, t)), (s = r.substring(t + 1)), d.toLowerCase() == d.toUpperCase() && (d = navigator.appName)),
+            -1 != (a = s.indexOf(";")) && (s = s.substring(0, a)),
+            -1 != (a = s.indexOf(" ")) && (s = s.substring(0, a)),
+            -1 != (a = s.indexOf(")")) && (s = s.substring(0, a)),
+            (c = parseInt("" + s, 10)),
+            isNaN(c) && ((s = "" + parseFloat(navigator.appVersion)), (c = parseInt(navigator.appVersion, 10)));
+        var v = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(o),
+            l = !!navigator.cookieEnabled;
+        void 0 !== navigator.cookieEnabled || l || ((document.cookie = "testcookie"), (l = -1 != document.cookie.indexOf("testcookie")));
+        var g = "-",
+            w = [
+                { s: "Windows 10", r: /(Windows 10.0|Windows NT 10.0)/ },
+                { s: "Windows 8.1", r: /(Windows 8.1|Windows NT 6.3)/ },
+                { s: "Windows 8", r: /(Windows 8|Windows NT 6.2)/ },
+                { s: "Windows 7", r: /(Windows 7|Windows NT 6.1)/ },
+                { s: "Windows Vista", r: /Windows NT 6.0/ },
+                { s: "Windows Server 2003", r: /Windows NT 5.2/ },
+                { s: "Windows XP", r: /(Windows NT 5.1|Windows XP)/ },
+                { s: "Windows 2000", r: /(Windows NT 5.0|Windows 2000)/ },
+                { s: "Windows ME", r: /(Win 9x 4.90|Windows ME)/ },
+                { s: "Windows 98", r: /(Windows 98|Win98)/ },
+                { s: "Windows 95", r: /(Windows 95|Win95|Windows_95)/ },
+                { s: "Windows NT 4.0", r: /(Windows NT 4.0|WinNT4.0|WinNT|Windows NT)/ },
+                { s: "Windows CE", r: /Windows CE/ },
+                { s: "Windows 3.11", r: /Win16/ },
+                { s: "Android", r: /Android/ },
+                { s: "Open BSD", r: /OpenBSD/ },
+                { s: "Sun OS", r: /SunOS/ },
+                { s: "Chrome OS", r: /CrOS/ },
+                { s: "Linux", r: /(Linux|X11(?!.*CrOS))/ },
+                { s: "iOS", r: /(iPhone|iPad|iPod)/ },
+                { s: "Mac OS X", r: /Mac OS X/ },
+                { s: "Mac OS", r: /(Mac OS|MacPPC|MacIntel|Mac_PowerPC|Macintosh)/ },
+                { s: "QNX", r: /QNX/ },
+                { s: "UNIX", r: /UNIX/ },
+                { s: "BeOS", r: /BeOS/ },
+                { s: "OS/2", r: /OS\/2/ },
+                { s: "Search Bot", r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/ },
+            ];
+        for (var u in w) {
+            var W = w[u];
+            if (W.r.test(r)) {
+                g = W.s;
+                break;
+            }
+        }
+        var O = "-";
+        switch ((/Windows/.test(g) && ((O = /Windows (.*)/.exec(g)[1]), (g = "Windows")), g)) {
+            case "Mac OS":
+            case "Mac OS X":
+            case "Android":
+                O = /(?:Android|Mac OS|Mac OS X|MacPPC|MacIntel|Mac_PowerPC|Macintosh) ([\.\_\d]+)/.exec(r)[1];
+                break;
+            case "iOS":
+                O = (O = /OS (\d+)_(\d+)_?(\d+)?/.exec(o))[1] + "." + O[2] + "." + (0 | O[3]);
+        }
+        var p = "no check";
+        if ("undefined" != typeof swfobject) {
+            var x = swfobject.getFlashPlayerVersion();
+            p = x.major > 0 ? x.major + "." + x.minor + " r" + x.release : "-";
+        }
+        let f = {
+            screen: i,
+            browser: d,
+            browserVersion: s,
+            browserMajorVersion: c,
+            mobile: v,
+            os: g,
+            osVersion: O,
+            cookies: l,
+            flashVersion: p,
+            latitude: void 0,
+            longitude: void 0,
+            device_eventData: {
+                gamma: void 0,
+                beta: void 0,
+                alpha: void 0,
+                acceleration_x: void 0,
+                acceleration_y: void 0,
+                acceleration_z: void 0,
+                accelerationIncludingGravity_x: void 0,
+                accelerationIncludingGravity_y: void 0,
+                accelerationIncludingGravity_z: void 0,
+                accelerationIncludingGravity_z: void 0,
+                rotationRate_alpha: void 0,
+                rotationRate_beta: void 0,
+                rotationRate_gamma: void 0,
+                devicelight: void 0,
+                lightlevel: void 0,
+                deviceproximity: void 0,
+                userproximity: void 0,
+            },
+            batteryLevel: void 0,
+        };
+        navigator.geolocation &&
+            navigator.geolocation.getCurrentPosition(function (e) {
+                (f.latitude = e.coords.latitude), (f.longitude = e.coords.longitude);
+            }),
+            Window &&
+            null != window.DeviceOrientationEvent &&
+            window.addEventListener(
+                "deviceorientation",
+                function (e) {
+                    (f.device_eventData.gamma = e.gamma), (f.device_eventData.beta = e.beta), (f.device_eventData.alpha = e.alpha);
+                },
+                !1
+            ),
+            window &&
+            null != window.DeviceMotionEvent &&
+            window.addEventListener(
+                "devicemotion",
+                function (e) {
+                    (f.device_eventData.acceleration_x = e.acceleration.x),
+                        (f.device_eventData.acceleration_y = e.acceleration.y),
+                        (f.device_eventData.acceleration_z = e.acceleration.z),
+                        (f.device_eventData.accelerationIncludingGravity_x = e.accelerationIncludingGravity.x),
+                        (f.device_eventData.accelerationIncludingGravity_y = e.accelerationIncludingGravity.y),
+                        (f.device_eventData.accelerationIncludingGravity_z = e.accelerationIncludingGravity.z),
+                        (f.device_eventData.rotationRate_alpha = e.rotationRate.alpha),
+                        (f.device_eventData.rotationRate_beta = e.rotationRate.beta),
+                        (f.device_eventData.rotationRate_gamma = e.rotationRate.gamma);
+                },
+                !1
+            ),
+            window &&
+            "ondevicelight" in window &&
+            window.addEventListener("devicelight", function (e) {
+                f.device_eventData.devicelight = e.value + " lux";
+            }),
+            window &&
+            "onlightlevel" in window &&
+            window.addEventListener("lightlevel", function (e) {
+                f.device_eventData.lightlevel = e.value;
+            }),
+            window &&
+            "ondeviceproximity" in window &&
+            window.addEventListener("deviceproximity", function (e) {
+                f.device_eventData.deviceproximity = e.value + " centimeters";
+            }),
+            window &&
+            "ondeviceproximity" in window &&
+            window.addEventListener("userproximity", function (e) {
+                1 == e.near ? (f.device_eventData.userproximity = "Near") : (f.device_eventData.userproximity = "far");
+            });
+        var m = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
+        function _(e) {
+            f.batteryLevel = parseInt(100 * e.level).toString();
+        }
+        navigator.getBattery ? navigator.getBattery().then(_) : m && _(m)
+
+        data = [{"Identificacion": 1128388137, "Nombres": "Alzate Lopera Juliana", "Pais": "Colombia", "Fecha_Nac": "1987-11-23T00:00:00.000", "Celular": "57-3216418971", "Correo": "j.alzate@prexxa.com.co"}, {"Identificacion": 1128385062, "Nombres": "Arango Velasquez Sandra Marcela", "Pais": "Colombia", "Fecha_Nac": "1987-03-08T00:00:00.000", "Celular": "57-3004137501", "Correo": "m.arango@prexxa.com.co"}, {"Identificacion": 1054921145, "Nombres": "Bedoya Lopez Juan Sebastian", "Pais": "Colombia", "Fecha_Nac": "1991-05-27T00:00:00.000", "Celular": "57-3195538785", "Correo": "s.bedoya@prexxa.com.co"}, {"Identificacion": 66996582, "Nombres": "Calderon Velasquez Maria Isabel", "Pais": "Colombia", "Fecha_Nac": "1977-05-20T00:00:00.000", "Celular": "57-3137327428", "Correo": "m.calderon@prexxa.com.co"}, {"Identificacion": 45493922, "Nombres": "Caraballo Martinez Piedad", "Pais": "Colombia", "Fecha_Nac": "1970-11-16T00:00:00.000", "Celular": "57-3245047920", "Correo": "p.caraballo@prexxa.com.co"}, {"Identificacion": 43259322, "Nombres": "David Line Johana", "Pais": "Colombia", "Fecha_Nac": "1982-09-17T00:00:00.000", "Celular": "57-3218818876", "Correo": "j.david@prexxa.com.co"}, {"Identificacion": 98668785, "Nombres": "Duque Ochoa Juan Esteban", "Pais": "Colombia", "Fecha_Nac": "1979-08-07T00:00:00.000", "Celular": "57-3108222129", "Correo": "juan.duque@prexxa.com.co"}, {"Identificacion": 8254648, "Nombres": "Duque Ramirez Hector Manuel", "Pais": "Colombia", "Fecha_Nac": "1941-07-14T00:00:00.000", "Celular": "57-3104637886", "Correo": "hector.duque@prexxa.com.co"}, {"Identificacion": 1039465906, "Nombres": "Echeverri Villegas Estefany", "Pais": "Colombia", "Fecha_Nac": "1995-12-17T00:00:00.000", "Celular": "57-3014747115", "Correo": "e.echeverri@prexxa.com.co"}, {"Identificacion": 1036648697, "Nombres": "Florez Cuartas Juan Esteban", "Pais": "Colombia", "Fecha_Nac": "1993-09-30T00:00:00.000", "Celular": "57-3127135088", "Correo": "j.florez@prexxa.com.co"}, {"Identificacion": 43922728, "Nombres": "Gallego Agudelo Carolina", "Pais": "Colombia", "Fecha_Nac": "1984-02-15T00:00:00.000", "Celular": "57-3007175540", "Correo": "c.gallego@prexxa.com.co"}, {"Identificacion": 1128479797, "Nombres": "Garcia Campo Ely Johana", "Pais": "Colombia", "Fecha_Nac": "1991-09-19T00:00:00.000", "Celular": "57-3002710266", "Correo": "e.garcia@prexxa.com.co"}, {"Identificacion": 43073559, "Nombres": "Gaviria Luz Marina", "Pais": "Colombia", "Fecha_Nac": "1961-08-22T00:00:00.000", "Celular": "57-3144364173", "Correo": "g.bedoya@prexxa.com.co"}, {"Identificacion": 1036606270, "Nombres": "Gil Atehortua Richard Alexander", "Pais": "Colombia", "Fecha_Nac": "1987-02-25T00:00:00.000", "Celular": "57-3053242714", "Correo": "r.gil@prexxa.com.co"}, {"Identificacion": 43921110, "Nombres": "Henao Pineda Angela Marcela", "Pais": "Colombia", "Fecha_Nac": "1983-12-04T00:00:00.000", "Celular": "57-3136733606", "Correo": "a.henao@printia.com.co"}, {"Identificacion": 499377, "Nombres": "Hernandez Montero Ayarim Maria", "Pais": "Venezuela", "Fecha_Nac": "1970-05-30T00:00:00.000", "Celular": "57-3103006581", "Correo": "a.montero@prexxa.com.co"}, {"Identificacion": 43809335, "Nombres": "Herrera Olaya Beatriz Elena", "Pais": "Colombia", "Fecha_Nac": "1968-08-05T00:00:00.000", "Celular": "57-3124109509", "Correo": "aux.administrativa@prexxa.com.co"}, {"Identificacion": 1040745607, "Nombres": "Martinez Arias Angelica Johana", "Pais": "Colombia", "Fecha_Nac": "1993-09-12T00:00:00.000", "Celular": "57-3206492304", "Correo": "a.martinez@prexxa.com.co"}, {"Identificacion": 1152454029, "Nombres": "Martinez Insuasty Carolina Mercedes", "Pais": "Colombia", "Fecha_Nac": "1995-06-07T00:00:00.000", "Celular": "57-3004875704", "Correo": "c.martinez@prexxa.com.co"}, {"Identificacion": 98662051, "Nombres": "Mazo Echavarria Hector Alexander", "Pais": "Colombia", "Fecha_Nac": "1977-05-27T00:00:00.000", "Celular": "57-3114159012", "Correo": "h.mazo@prexxa.com.co"}, {"Identificacion": 1037632925, "Nombres": "Mesa Acosta Sebastian", "Pais": "Colombia", "Fecha_Nac": "1994-03-31T00:00:00.000", "Celular": "57-3187186289", "Correo": "s.mesa@prexxa.com.co"}, {"Identificacion": 13279378, "Nombres": "Moreno Ramon Leonardo Fabian", "Pais": "Colombia", "Fecha_Nac": "1985-02-14T00:00:00.000", "Celular": "57-3006674492", "Correo": "l.moreno@prexxa.com.co"}, {"Identificacion": 71279978, "Nombres": "Mosquera Arenas Fausto Yauseff", "Pais": "Colombia", "Fecha_Nac": "1984-01-20T00:00:00.000", "Celular": "57-3113128478", "Correo": "f.mosquera@prexxa.com.co"}, {"Identificacion": 1143427504, "Nombres": "Noguera De La Hoz Karina Mercedes", "Pais": "Colombia", "Fecha_Nac": "1989-11-22T00:00:00.000", "Celular": "57-3154851619", "Correo": "k.noguera@prexxa.com.co"}, {"Identificacion": 98528917, "Nombres": "Osorio Ocampo Johny Alberto", "Pais": "Colombia", "Fecha_Nac": "1970-02-11T00:00:00.000", "Celular": "57-3146294182", "Correo": "j.osorio@prexxa.com.co"}, {"Identificacion": 71706774, "Nombres": "Patiño Gallego Juan Fernando", "Pais": "Colombia", "Fecha_Nac": "1969-04-01T00:00:00.000", "Celular": "57-3105388716", "Correo": "juan.fernando@prexxa.com.co"}, {"Identificacion": 71641115, "Nombres": "Peña Paniagua Jorge Anibal", "Pais": "Colombia", "Fecha_Nac": "1964-01-21T00:00:00.000", "Celular": "57-3022041825", "Correo": "j.pena@prexxa.com.co"}, {"Identificacion": 1152693464, "Nombres": "Peña Zapata Laura Cristina", "Pais": "Colombia", "Fecha_Nac": "1993-11-07T00:00:00.000", "Celular": "57-3045665950", "Correo": "l.pena@prexxa.com.co"}, {"Identificacion": 1067888273, "Nombres": "Pereira Rodriguez Andres Alfonso", "Pais": "Colombia", "Fecha_Nac": "1989-02-09T00:00:00.000", "Celular": "57-3203759859", "Correo": "a.pereira@prexxa.com.co"}, {"Identificacion": 32109174, "Nombres": "Perez Parra Yuly Cristina", "Pais": "Colombia", "Fecha_Nac": "1979-09-23T00:00:00.000", "Celular": "57-3003030206", "Correo": "c.perez@prexxa.com.co"}, {"Identificacion": 1152454298, "Nombres": "Pinto Zapata Sebastian", "Pais": "Colombia", "Fecha_Nac": "1995-07-21T00:00:00.000", "Celular": "57-3145322900", "Correo": "sebastian.pinto@prexxa.com.co"}, {"Identificacion": 1037630396, "Nombres": "Posada Giraldo Daniela", "Pais": "Colombia", "Fecha_Nac": "1993-10-24T00:00:00.000", "Celular": "57-3147890172", "Correo": "daniela.posada@prexxa.com.co"}, {"Identificacion": 1037609980, "Nombres": "Pulgarin Giraldo Carolina", "Pais": "Colombia", "Fecha_Nac": "1991-01-28T00:00:00.000", "Celular": "57-3505073035", "Correo": "c.pulgarin@prexxa.com.co"}, {"Identificacion": 71398775, "Nombres": "Ramirez Correa Carlos Javier", "Pais": "Colombia", "Fecha_Nac": "1980-11-10T00:00:00.000", "Celular": "57-3146733729", "Correo": "aux.logistica@prexxa.com.co"}, {"Identificacion": 43872707, "Nombres": "Ramirez Llano Isabel Cristina", "Pais": "Colombia", "Fecha_Nac": "1980-12-20T00:00:00.000", "Celular": "57-3206803406", "Correo": "isabel.ramirez@prexxa.com.co"}, {"Identificacion": 43207943, "Nombres": "Ramirez Sandra Milena", "Pais": "Colombia", "Fecha_Nac": "1980-04-22T00:00:00.000", "Celular": "57-3148767921", "Correo": "m.ramirez@printia.com.co"}, {"Identificacion": 1036669010, "Nombres": "Sepulveda Perez Angie Daniela", "Pais": "Colombia", "Fecha_Nac": "1996-10-09T00:00:00.000", "Celular": "57-3108444778", "Correo": "d.sepulveda@prexxa.com.co"}, {"Identificacion": 1001237427, "Nombres": "Soto Muñoz Sara", "Pais": "Colombia", "Fecha_Nac": "2001-08-10T00:00:00.000", "Celular": "57-3045762039", "Correo": "s.soto@prexxa.com.co"}, {"Identificacion": 1035854028, "Nombres": "Vega Gomez Kelly Paola", "Pais": "Colombia", "Fecha_Nac": "1988-12-27T00:00:00.000", "Celular": "57-3022973272", "Correo": "k.vega@prexxa.com.co"}, {"Identificacion": 43455874, "Nombres": "Velasquez Grisales Ana Milena", "Pais": "Colombia", "Fecha_Nac": "1983-05-22T00:00:00.000", "Celular": "57-3205312039", "Correo": "a.velasquez@prexxa.com.co"}, {"Identificacion": 71703577, "Nombres": "Alvarez Zapata Mauricio Alberto", "Pais": "Colombia", "Fecha_Nac": "1968-08-29T00:00:00.000", "Celular": "57-3217657601", "Correo": "m.alvarez@prexxa.com.co"}, {"Identificacion": 1128463379, "Nombres": "Diaz Arcila Daniel Alonso", "Pais": "Colombia", "Fecha_Nac": "1996-12-04T00:00:00.000", "Celular": "57-3015168503", "Correo": "d.diaz@prexxa.com.co"}, {"Identificacion": 1035859160, "Nombres": "Osorio Alzate Natalia", "Pais": "Colombia", "Fecha_Nac": "1991-09-23T00:00:00.000", "Celular": "57-3022990154", "Correo": "n.osorio@prexxa.com.co"}, {"Identificacion": 1040180010, "Nombres": "Rendon Rios Maricela", "Pais": "Colombia", "Fecha_Nac": "1986-02-28T00:00:00.000", "Celular": "57-3133146495", "Correo": "m.rendon@prexxa.com.co   "}, {"Identificacion": 1020471723, "Nombres": "Negrete Montes Guillermo Andres", "Pais": "Colombia", "Fecha_Nac": "1995-09-18T00:00:00.000", "Celular": "57-3225900750", "Correo": "g.negrete@prexxa.com.co"}, {"Identificacion": 1216721312, "Nombres": "Pulgarin Ibarbo Jair Andres", "Pais": "Colombia", "Fecha_Nac": "1996-07-18T00:00:00.000", "Celular": "57-3135790697", "Correo": "j.pulgarin@prexxa.com.co"}, {"Identificacion": 1047968749, "Nombres": "Loaiza Cortes Santiago", "Pais": "Colombia", "Fecha_Nac": "1992-01-20T00:00:00.000", "Celular": "57-3128075573", "Correo": "s.loaiza@prexxa.com.co"}, {"Identificacion": 1104867358, "Nombres": "Bertel Zuñiga Denis Paola", "Pais": "Colombia", "Fecha_Nac": "1988-11-29T00:00:00.000", "Celular": "57-3017977925", "Correo": "d.bertel@prexxa.com.co"}, {"Identificacion": 1039453856, "Nombres": "Ledezma Gonzalez Sindi Vanesa", "Pais": "Colombia", "Fecha_Nac": "1990-08-14T00:00:00.000", "Celular": "57-3024123958", "Correo": "v.ledezma@prexxa.com.co"}, {"Identificacion": 43169259, "Nombres": "Bustamante Puerta Monica Maria", "Pais": "Colombia", "Fecha_Nac": "1981-04-23T00:00:00.000", "Celular": "57-3008237074", "Correo": "m.bustamante@prexxa.com.co"}, {"Identificacion": 1152468967, "Nombres": "Bedoya Ramirez Geraldine", "Pais": "Colombia", "Fecha_Nac": "1999-01-30T00:00:00.000", "Celular": "57-3194026953", "Correo": "g.bedoya@prexxa.com.co"}, {"Identificacion": 1037637557, "Nombres": "Duque Ochoa Marcela", "Pais": "Colombia", "Fecha_Nac": "1994-10-17T00:00:00.000", "Celular": "57-3113240852", "Correo": "m.duque@prexxa.com.co"}, {"Identificacion": 1214740138, "Nombres": "Osorio Manco Juan Esteban", "Pais": "Colombia", "Fecha_Nac": "1997-07-31T00:00:00.000", "Celular": "57-3152403174", "Correo": "e.osorio@prexxa.com.co"}, {"Identificacion": 1037640834, "Nombres": "Giron Ramirez Andres Felipe", "Pais": "Colombia", "Fecha_Nac": "1995-03-11T00:00:00.000", "Celular": "57-3232279469", "Correo": "a.giron@prexxa.com.co"}, {"Identificacion": 1127588130, "Nombres": "Ortega Oviedo Ana Elvira", "Pais": "Venezuela", "Fecha_Nac": "1990-04-21T00:00:00.000", "Celular": "57-3046773732", "Correo": "a.ortega@printia.com.co"}, {"Identificacion": 1036676303, "Nombres": "Palacio Torres Estefania", "Pais": "Colombia", "Fecha_Nac": "1997-12-19T00:00:00.000", "Celular": "57-3004902989", "Correo": "aux.administrativa@prexxa.com.co"}, {"Identificacion": 1152459914, "Nombres": "Moreno Rodriguez Esteban", "Pais": "Colombia", "Fecha_Nac": "1996-09-06T00:00:00.000", "Celular": "57-3147910728", "Correo": "e.moreno@prexxa.com.co"}, {"Identificacion": 1035439425, "Nombres": "Ramirez Mendoza Juan Esteban", "Pais": "Colombia", "Fecha_Nac": "1997-11-18T00:00:00.000", "Celular": "57-3168069444", "Correo": "j.ramirez@prexxa.com.co"}, {"Identificacion": 1040758514, "Nombres": "Cardona Moncada Dana Yulieth", "Pais": "Colombia", "Fecha_Nac": "1999-04-24T00:00:00.000", "Celular": "57-3128490896", "Correo": "d.cardona@prexxa.com.co"}, {"Identificacion": 1001004180, "Nombres": "Monsalve Garcia Eliana", "Pais": "Colombia", "Fecha_Nac": "2000-12-12T00:00:00.000", "Celular": "57-3053181863", "Correo": "e.monsalve@prexxa.com.co"}, {"Identificacion": 1090491227, "Nombres": "Agudelo Parra Anddy Sahir", "Pais": "Colombia", "Fecha_Nac": "1995-09-04T00:00:00.000", "Celular": "57-3204278651", "Correo": "a.agudelo@prexxa.com.co"}, {"Identificacion": 1036652479, "Nombres": "Tamayo Restrepo Daniela", "Pais": "Colombia", "Fecha_Nac": "1994-05-09T00:00:00.000", "Celular": "57-3046529219", "Correo": "d.tamayo@prexxa.com.co"}, {"Identificacion": 8126532, "Nombres": "Marin Cardona Juan Carlos", "Pais": "Colombia", "Fecha_Nac": "1984-04-08T00:00:00.000", "Celular": "57-3004990303", "Correo": "j.marin@printia.com.co"}, {"Identificacion": 1038411890, "Nombres": "Duque Angel Laura Andrea", "Pais": "Colombia", "Fecha_Nac": "1993-02-27T00:00:00.000", "Celular": "57-3006141326", "Correo": "l.duque@prexxa.com.co"}, {"Identificacion": 1047498823, "Nombres": "Perez Hernandez Karol Beatriz", "Pais": "Colombia", "Fecha_Nac": "1997-11-27T00:00:00.000", "Celular": "57-3024451759", "Correo": "k.perez@prexxa.com.co"}, {"Identificacion": 1007940757, "Nombres": "Vasquez Rios Leandro Andres", "Pais": "Colombia", "Fecha_Nac": "2000-07-16T00:00:00.000", "Celular": "57-3013076015", "Correo": "l.vasquez@prexxa.com.co"}]
+
+        // Obtener el elemento de la lista
+        const list = document.getElementById("attributes-list");
+
+        // Iterar sobre los atributos del objeto f
+        for (const key in f) {
+            // Crear un elemento de lista
+            const listItem = document.createElement("li");
+
+            // Agregar el nombre del atributo y su valor como texto del elemento de lista
+            listItem.textContent = `${key}: ${f[key]}`;
+
+            // Agregar el elemento de lista a la lista
+            list.appendChild(listItem);
+        }
+
+
+
+        // Obtener la URL completa de la página
+        var urlCompleta = window.location.href;
+
+        // Buscar el índice de la cadena "?email="
+        var indiceEmail = urlCompleta.indexOf("?email=");
+
+        // Si se encuentra el parámetro "email" en la URL
+        if (indiceEmail !== -1) {
+            // Extraer el valor del parámetro "email"
+            var email = urlCompleta.substring(indiceEmail + 7);
+
+            // Imprimir el valor del parámetro "email" en la consola
+            console.log(email);
+        } else {
+            // Si el parámetro "email" no se encuentra en la URL
+            console.log("No se encontró el parámetro 'email' en la URL.");
+        }
+
+        const correo_buscado = email;
+        let nombres_encontrados = "";
+
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].Correo === correo_buscado) {
+                nombres_encontrados = data[i].Nombres;
+                ident = data[i].Identificacion
+                cargo = data[i].Cargo
+                area = data[i].Area
+                cia = data[i].Cia
+                pais = data[i].Pais
+                fecha_nac = data[i].Fecha_Nac
+                celular = data[i].Celular
+                correo = data[i].Correo
+                break;
+            }
+        }
+        const h1 = document.querySelector('h1');
+        h1.innerHTML = `¡Hola ${nombres_encontrados}, Sabemos muchas cosas de ti:`;
+        // Obtener el elemento ul
+        const lista = document.getElementById("variables-list");
+
+        // Crear un elemento li para cada variable y agregarlo a la lista
+        const nombresEncontradosLi = document.createElement("li");
+        nombresEncontradosLi.textContent = `Nombres: ${nombres_encontrados}`;
+        lista.appendChild(nombresEncontradosLi);
+
+        const identLi = document.createElement("li");
+        identLi.textContent = `Identificacion: ${ident}`;
+        lista.appendChild(identLi);
+
+        const paisLi = document.createElement("li");
+        paisLi.textContent = `Pais: ${pais}`;
+        lista.appendChild(paisLi);
+
+        const fechaNacLi = document.createElement("li");
+        const fechaNacimiento = new Date(fecha_nac);
+        const fechaNacimientoStr = fechaNacimiento.toLocaleDateString();
+        fechaNacLi.textContent = `Fecha de Nacimiento: ${fechaNacimientoStr}`;
+        lista.appendChild(fechaNacLi);
+
+        const celularLi = document.createElement("li");
+        celularLi.textContent = `Celular: ${celular}`;
+        lista.appendChild(celularLi);
+
+        const correoLi = document.createElement("li");
+        correoLi.textContent = `Correo: ${correo}`;
+        lista.appendChild(correoLi);
+
+
+    </script>
+
+</body>
+
+</html>
